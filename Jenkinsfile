@@ -4,7 +4,7 @@ pipeline {
         upstream(upstreamProjects: 'UCSB-PSTAT GitHub/base-rstudio/main', threshold: hudson.model.Result.SUCCESS)
     }
     environment {
-        IMAGE_NAME = '<COURSE/IMAGE ID>'
+        IMAGE_NAME = 'pstat-126'
     }
     stages {
         stage('Build Test Deploy') {
