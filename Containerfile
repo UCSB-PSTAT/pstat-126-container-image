@@ -7,7 +7,7 @@ USER root
 RUN pip install otter-grader \
     rpy2
 
-RUN R -e "install.packages(c('tidyverse', 'tidymodels', 'simex', 'faraway', 'nlme', 'quantreg', 'MASS', 'splines', 'mgcv', 'leaps', 'pls', 'lars', 'Amelia', 'glmnet', 'quarto', 'alr4'), repos = 'https://cloud.r-project.org/', Ncpus = parallel::detectCores())"
+RUN mamba install -y r-tidyverse r-tidymodel r-simex r-faraway r-nlme r-quantreg r-mass r-splines r-mgcv r-leaps r-pls r-lars r-amelia r-glmnet r-quarto r-alr4
 
 USER $NB_USER
 
